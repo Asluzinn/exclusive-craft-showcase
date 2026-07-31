@@ -461,13 +461,13 @@ function Portfolio() {
             onClick={(e) => e.stopPropagation()}
           >
             <img
-              src={gallery[active].src}
-              alt={gallery[active].title}
+              src={gallery[active]!.src}
+              alt={gallery[active]!.title}
               className="max-h-[74svh] w-full rounded-sm object-contain"
             />
             <figcaption className="mt-4 text-center">
-              <span className="eyebrow text-[0.6rem]">{gallery[active].tag}</span>
-              <p className="mt-1 font-display text-2xl">{gallery[active].title}</p>
+              <span className="eyebrow text-[0.6rem]">{gallery[active]!.tag}</span>
+              <p className="mt-1 font-display text-2xl">{gallery[active]!.title}</p>
             </figcaption>
           </motion.figure>
         </motion.div>

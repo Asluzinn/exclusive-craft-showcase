@@ -188,14 +188,16 @@ function Hero() {
 
   return (
     <section id="topo" ref={ref} className="relative flex min-h-[100svh] items-center overflow-hidden">
-      <motion.img
-        style={{ y }}
-        src={img1.url}
-        alt="Cozinha gourmet planejada assinada pela Exclusiva Marcenaria"
-        className="absolute inset-0 h-full w-full object-cover"
-      />
+      <motion.div style={{ y }} className="absolute inset-0 -z-0">
+        <img
+          src={img1.url}
+          alt="Cozinha gourmet planejada assinada pela Exclusiva Marcenaria"
+          className="h-full w-full object-cover object-center"
+        />
+      </motion.div>
       <div className="absolute inset-0 bg-[var(--gradient-veil)]" />
-      <div className="absolute inset-0 bg-background/55" />
+      <div className="absolute inset-0 bg-background/65" />
+
 
       <motion.div style={{ opacity: fade }} className="relative mx-auto w-full max-w-7xl px-5 pt-28 pb-24 sm:px-8">
         <motion.img

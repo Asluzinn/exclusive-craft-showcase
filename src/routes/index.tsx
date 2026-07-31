@@ -16,16 +16,16 @@ import {
   X,
 } from "lucide-react";
 
-import logo from "@/assets/logo.png.asset.json";
-import img1 from "@/assets/IMG_3170.jpg.asset.json";
-import img2 from "@/assets/IMG_3171.jpg.asset.json";
-import img3 from "@/assets/IMG_3172.jpg.asset.json";
-import img4 from "@/assets/IMG_3173.jpg.asset.json";
-import img5 from "@/assets/IMG_3174.jpg.asset.json";
-import img6 from "@/assets/IMG_3175.jpg.asset.json";
-import img7 from "@/assets/IMG_3167.jpg.asset.json";
-import img8 from "@/assets/IMG_3168.jpg.asset.json";
-import img9 from "@/assets/IMG_3177.jpg.asset.json";
+import logo from "@/assets/logo.png";
+import img1 from "@/assets/IMG_3170.jpg";
+import img2 from "@/assets/IMG_3171.jpg";
+import img3 from "@/assets/IMG_3172.jpg";
+import img4 from "@/assets/IMG_3173.jpg";
+import img5 from "@/assets/IMG_3174.jpg";
+import img6 from "@/assets/IMG_3175.jpg";
+import img7 from "@/assets/IMG_3167.jpg";
+import img8 from "@/assets/IMG_3168.jpg";
+import img9 from "@/assets/IMG_3177.jpg";
 
 const WHATSAPP =
   "https://api.whatsapp.com/send/?phone=%2B553191369845&text=Ol%C3%A1%21%20Gostaria%20de%20um%20or%C3%A7amento%20de%20m%C3%B3veis%20planejados.&type=phone_number&app_absent=0";
@@ -73,15 +73,15 @@ export const Route = createFileRoute("/")({
 });
 
 const gallery = [
-  { src: img1.url, title: "Cozinha Gourmet integrada à sala", tag: "Residencial" },
-  { src: img2.url, title: "Bancada linear em carvalho", tag: "Cozinha" },
-  { src: img3.url, title: "Adega iluminada e painel ripado", tag: "Living" },
-  { src: img4.url, title: "Torre de fornos e adega em LED", tag: "Gourmet" },
-  { src: img5.url, title: "Home theater sob medida", tag: "Sala de TV" },
-  { src: img6.url, title: "Marcenaria de piso a teto", tag: "Detalhes" },
-  { src: img7.url, title: "Cozinha Magma Corten", tag: "Assinatura" },
-  { src: img8.url, title: "Aéreos com pistão a gás", tag: "Ferragens" },
-  { src: img9.url, title: "Recepção de Clínica Médica", tag: "Corporativo" },
+  { src: img1, title: "Cozinha Gourmet integrada à sala", tag: "Residencial" },
+  { src: img2, title: "Bancada linear em carvalho", tag: "Cozinha" },
+  { src: img3, title: "Adega iluminada e painel ripado", tag: "Living" },
+  { src: img4, title: "Torre de fornos e adega em LED", tag: "Gourmet" },
+  { src: img5, title: "Home theater sob medida", tag: "Sala de TV" },
+  { src: img6, title: "Marcenaria de piso a teto", tag: "Detalhes" },
+  { src: img7, title: "Cozinha Magma Corten", tag: "Assinatura" },
+  { src: img8, title: "Aéreos com pistão a gás", tag: "Ferragens" },
+  { src: img9, title: "Recepção de Clínica Médica", tag: "Corporativo" },
 ];
 
 function Reveal({
@@ -149,7 +149,7 @@ function Nav() {
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-3 sm:px-8">
         <a href="#topo" className="flex items-center gap-3">
-          <img src={logo.url} alt="Brasão da Exclusiva Marcenaria" className="h-11 w-auto" />
+          <img src={logo} alt="Brasão da Exclusiva Marcenaria" className="h-11 w-auto" />
           <span className="hidden leading-tight sm:block">
             <span className="block font-display text-lg tracking-[0.28em] text-foreground">EXCLUSIVA</span>
             <span className="block text-[0.55rem] tracking-[0.5em] text-muted-foreground">MARCENARIA</span>
@@ -190,7 +190,7 @@ function Hero() {
     <section id="topo" ref={ref} className="relative flex min-h-[100svh] items-center overflow-hidden">
       <motion.div style={{ y }} className="absolute inset-0 -z-0">
         <img
-          src={img1.url}
+          src={img1}
           alt="Cozinha gourmet planejada assinada pela Exclusiva Marcenaria"
           className="h-full w-full object-cover object-center"
         />
@@ -204,7 +204,7 @@ function Hero() {
           initial={{ opacity: 0, scale: 0.85 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
-          src={logo.url}
+          src={logo}
           alt="Logo Exclusiva Marcenaria"
           className="animate-floaty mb-8 h-24 w-auto sm:h-28"
         />
@@ -287,7 +287,7 @@ function Sobre() {
         <Reveal className="relative">
           <div className="relative overflow-hidden rounded-sm shadow-[var(--shadow-lux)]">
             <img
-              src={img7.url}
+              src={img7}
               alt="Cozinha em acabamento Magma Corten produzida pela Exclusiva Marcenaria"
               className="h-[460px] w-full object-cover transition-transform duration-[1.2s] hover:scale-105 sm:h-[560px]"
               loading="lazy"
@@ -500,7 +500,7 @@ function Diferenciais() {
   return (
     <section className="relative overflow-hidden border-y border-border py-28 sm:py-36">
       <img
-        src={img4.url}
+        src={img4}
         alt=""
         aria-hidden
         className="absolute inset-0 h-full w-full object-cover opacity-20"
@@ -635,7 +635,7 @@ function Footer() {
   return (
     <footer className="border-t border-border py-14">
       <div className="mx-auto flex max-w-7xl flex-col items-center gap-6 px-5 text-center sm:px-8">
-        <img src={logo.url} alt="Exclusiva Marcenaria" className="h-14 w-auto" />
+        <img src={logo} alt="Exclusiva Marcenaria" className="h-14 w-auto" />
         <div>
           <p className="font-display text-lg tracking-[0.3em]">EXCLUSIVA</p>
           <p className="text-[0.55rem] tracking-[0.5em] text-muted-foreground">MARCENARIA</p>

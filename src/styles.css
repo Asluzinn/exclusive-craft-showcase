@@ -142,3 +142,97 @@
     color: var(--color-foreground);
   }
 }
+
+/* ---------- Exclusiva Marcenaria — design system ---------- */
+:root {
+  --background: oklch(0.16 0.008 60);
+  --foreground: oklch(0.96 0.008 80);
+  --card: oklch(0.21 0.01 62);
+  --card-foreground: oklch(0.96 0.008 80);
+  --popover: oklch(0.21 0.01 62);
+  --popover-foreground: oklch(0.96 0.008 80);
+  --primary: oklch(0.72 0.09 78);
+  --primary-foreground: oklch(0.16 0.01 60);
+  --secondary: oklch(0.26 0.012 62);
+  --secondary-foreground: oklch(0.96 0.008 80);
+  --muted: oklch(0.26 0.012 62);
+  --muted-foreground: oklch(0.72 0.015 75);
+  --accent: oklch(0.62 0.11 62);
+  --accent-foreground: oklch(0.98 0.005 80);
+  --border: oklch(0.34 0.02 70 / 45%);
+  --input: oklch(0.34 0.02 70 / 45%);
+  --ring: oklch(0.72 0.09 78);
+  --radius: 0.25rem;
+
+  --gold: oklch(0.78 0.1 82);
+  --gold-deep: oklch(0.58 0.1 62);
+  --wood: oklch(0.52 0.09 55);
+  --gradient-gold: linear-gradient(105deg, var(--gold-deep), var(--gold), var(--gold-deep));
+  --gradient-veil: linear-gradient(180deg, oklch(0.12 0.01 60 / 0.15), oklch(0.12 0.01 60 / 0.92));
+  --shadow-lux: 0 30px 70px -30px oklch(0 0 0 / 0.85);
+  --shadow-gold: 0 18px 45px -18px oklch(0.72 0.09 78 / 0.5);
+}
+
+@theme inline {
+  --color-gold: var(--gold);
+  --color-gold-deep: var(--gold-deep);
+  --color-wood: var(--wood);
+  --font-display: "Cormorant Garamond", serif;
+  --font-sans: "Manrope", sans-serif;
+}
+
+body {
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, .font-display {
+  font-family: var(--font-display);
+}
+
+@utility text-gold-gradient {
+  background: var(--gradient-gold);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+@utility eyebrow {
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.42em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+@utility hairline {
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  height: 1px;
+}
+
+@utility surface-card {
+  background: linear-gradient(160deg, oklch(0.23 0.012 62), oklch(0.18 0.01 60));
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-lux);
+}
+
+@utility grain-bg {
+  background-image: radial-gradient(circle at 20% 10%, oklch(0.32 0.03 62 / 0.5), transparent 55%),
+    radial-gradient(circle at 85% 80%, oklch(0.3 0.04 55 / 0.4), transparent 50%);
+}
+
+@keyframes floaty {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+@keyframes shimmer {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 200% 50%; }
+}
+@utility animate-floaty { animation: floaty 6s ease-in-out infinite; }
+@utility shimmer-gold {
+  background: linear-gradient(100deg, var(--gold-deep), var(--gold), var(--gold-deep));
+  background-size: 200% 100%;
+  animation: shimmer 4s linear infinite;
+}
